@@ -86,8 +86,15 @@
     // ❗ Notes:
     // 🧠 Solve this challenge using the map method of the learners array.
     // 🧠 Use arrow functions.
-    const processLearnerMap = () => {
-
+    const processLearnerMap = ( arrayOfObjects ) => {
+      arrayOfObjects.map( obj => {
+        if ( obj['lovesJS'] === 0 ) {
+          obj['lovesJS'] = false;
+        } else if ( obj['lovesJS'] === 1 ) {
+          obj['lovesJS'] = true;
+        }
+      } )
+      return arrayOfObjects
     }
 
     // 👉 CHALLENGE 5
