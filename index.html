@@ -52,9 +52,16 @@
     // ❗ Notes:
     // 🧠 There are many approaches to this problem: using a loop, using forEach, using map...
     // 🧠 Solve this challenge using a for/in loop or a for loop.
-    const processLearnersLoop = () => {
-
+    const processLearnersLoop = ( arrayOfObjects ) => {
+      for ( let obj of arrayOfObjects ) {
+        if ( obj['lovesJS'] === 0 ) {
+          obj['lovesJS'] = false;
+        } else if ( obj['lovesJS'] === 1 ) {
+          obj['lovesJS'] = true;
+      }
     }
+    return arrayOfObjects
+  }
 
     // 👉 CHALLENGE 3
     // 🧠 The function processLearnerForEach takes an array of learner objects as its argument, and returns it after some modifications.
