@@ -153,8 +153,18 @@
     // ❗ Notes:
     // 🧠 This could be solved by using filter to make an array of odd integers, and then using forEach to add them up.
     // 🧠 Or you could opt for solving everything with a single forEach which is the recommended approach (saves a loop).
-    const sumOddInts = () => {
-
+    const sumOddInts = ( arrayOfIntegers ) => {
+      let result = []
+      let oddNumbers = arrayOfIntegers.filter ( num => num % 2 !== 0 )
+      console.log(oddNumbers)
+      let sum = 0;
+      oddNumbers.forEach ( num => {
+        sum += num
+      } )
+      result.push( sum )
+      result.push(oddNumbers)
+      return result
+      
     }
 
     // 👉 CHALLENGE 8
