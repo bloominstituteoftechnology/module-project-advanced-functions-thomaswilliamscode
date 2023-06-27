@@ -126,8 +126,19 @@
     // 🧠 It should work exactly the same as the getJavaScriptLoversForEach function above.
     // ❗ Notes:
     // 🧠 Solve this challenge using the filter method of the learners array.
-    const getJavaScriptLoversFilter = () => {
-
+    const getJavaScriptLoversFilter = ( arrayOfObjects ) => {
+      let result = [];
+      arrayOfObjects.filter ( array => {
+        if ( ( array['lovesJS'] === 1 ) || ( array['lovesJS'] === true ) ) {
+          result.push(array)
+        }
+        
+      } ) 
+      if ( result[0] === undefined ) {
+        return 'no JS lovers here!'
+      } else {
+        return result
+      }
     }
 
     // 👉 CHALLENGE 7
