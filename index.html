@@ -178,9 +178,21 @@
     // checkInts(2, 6) // should return ["even", "even"]
     // ❗ Notes:
     // 🧠 Solve this problem using rest parameters and map.
-    const checkInts = () => {
-
-    }
+    const checkInts = ( ...integer ) => {
+      let arrayOfStrings = []
+      if ( integer[0] === undefined ) {
+        return 'pass some arguments, yo!'
+      } 
+      integer.map( int => {
+        let even = int % 2 === 0
+        if ( even === true ) {
+        arrayOfStrings.push('even')
+      } else {
+        arrayOfStrings.push('odd')
+      }
+    })
+    return arrayOfStrings
+  }
 
     // 🧪 TESTS, do not work below this line
     // 🧪 TESTS, do not work below this line
